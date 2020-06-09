@@ -5,9 +5,9 @@ const mongoose = require("mongoose");
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const http = require('http');
-const logger = require('./App/libs/loggerLib');
-const routeLoggerMiddleware = require('./App/middlewares/routeLogger');
-const globalErrorMiddleware  = require('./App/middlewares/appErrorHandler');
+const logger = require('./app/libs/loggerLib');
+const routeLoggerMiddleware = require('./app/middlewares/routeLogger');
+const globalErrorMiddleware  = require('./app/middlewares/appErrorHandler');
 const path = require('path');
 
 
@@ -24,8 +24,8 @@ app.use(express.static(path.join(__dirname, 'eventdoc')));
 
 
 
-const modelPath = './App/models';
-const routePath = './App/routes';
+const modelPath = './app/models';
+const routePath = './app/routes';
 
 app.all('*', function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -67,7 +67,7 @@ server.on('listening', onListening);
 // end server listening code
 
 // socket io connection handler 
-const socketLib = require("./App/libs/socketLib");
+const socketLib = require("./app/libs/socketLib");
 const socketServer = socketLib.setServer(server);
 
 // end socketio connection handler
