@@ -1,7 +1,7 @@
 {
-    "name": "To-Do Application",
+    "name": "Ease Your Day Application",
     "version": "1.0.0",
-    "description": "Documentation for To-Do Application",
-    "title": "APIs for To_do Application",
-    "url" : "http://localhost:3000"
+    "description": "Documentation for Ease Your Day Application",
+    "title": "APIs for Ease Your Day Application",
+    "url" : "http://apitodo.codervisions.in"
   }
