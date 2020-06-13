@@ -12,8 +12,8 @@ const emailVerify = require('./../libs/emailVerificationLib')
 const UserModel = mongoose.model('User')
 const AuthModel = mongoose.model('Auth')
 
-const appUrl = "http://localhost:4200"
-//const appUrl = "http://todo.codervisions.in"
+//const appUrl = "http://localhost:4200"
+const appUrl = "http://todo.codervisions.in"
 /* Get all user details */
 let getAllUser = async (req, res) => {
    const result = await UserModel.find() .select(' -password -__v -_id').lean().exec() 
