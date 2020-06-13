@@ -19,8 +19,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(routeLoggerMiddleware.logIp);
 app.use(globalErrorMiddleware.globalErrorHandler);
-app.use(express.static(path.join(__dirname, 'apidoc')));
-app.use(express.static(path.join(__dirname, 'eventdoc')));
+app.use('/apiDoc',express.static(path.join(__dirname, 'apidoc')));
+app.use('/eventDoc',express.static(path.join(__dirname, 'eventdoc')));
 
 
 
